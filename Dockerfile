@@ -2,6 +2,7 @@ FROM python:3.7
 
 RUN mkdir /var/bot
 WORKDIR /var/bot
+ADD . /var/bot
 
 RUN apt update -y
 RUN apt install -y locales
