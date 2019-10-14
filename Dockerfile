@@ -5,8 +5,7 @@ WORKDIR /var/bot
 ADD . /var/bot
 
 RUN apt update -y
-RUN apt install -y locales
-RUN locale-gen
+RUN apt install -y locales locales-all
 
 ENV LANG="ja_JP.UTF-8" \
     LANGUAGE="ja_JP:ja" \
