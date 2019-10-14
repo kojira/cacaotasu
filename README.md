@@ -1,5 +1,7 @@
 # cacaotasu
 
+![かかおたす](https://raw.githubusercontent.com/kojira/cacaotasu/master/images/screen1.png)
+
 取引所の価格を取得してくるdiscord botです。
 
 現時点で対応しているのは
