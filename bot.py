@@ -42,11 +42,11 @@ def get_market_price_unnamed_exchange(base, target):
     for_disp["lowestSell"] = f"{response_target['lowestSell']:.8f} {base}"
 
     doge = response_target['close']
-    # DOGEのBTC価格を取得
+    # base通貨のBTC価格を取得
     unnamed_api_url = "https://api.unnamed.exchange/v1/Public/Ticker?market={}_{}".format(
-        "DOGE", "BTC")
-    response_doge = requests.get(unnamed_api_url).json()
-    btc = response_doge['close']
+        base, "BTC")
+    response_base = requests.get(unnamed_api_url).json()
+    btc = response_base['close']
     jpy = get_market_price_doge2jpy(doge, btc)
     usd = get_market_price_doge2usd(doge, btc)
     for_disp[f"{base}_BTC"] = f"{btc:,.8f}"
